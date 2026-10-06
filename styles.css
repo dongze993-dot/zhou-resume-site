@@ -291,7 +291,7 @@ body { overflow-x: hidden; }
 /* Mouse-led light follows the reader across information surfaces. */
 .pointer-surface { position: relative; isolation: isolate; overflow: hidden; }
 .pointer-surface::after { position: absolute; inset: 0; z-index: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(18rem circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(114,238,211,.22), transparent 62%); opacity: 0; transition: opacity .25s ease; content: ""; }
-.pointer-surface > * { position: relative; z-index: 1; }
+.pointer-surface > :not(.timeline-step) { position: relative; z-index: 1; }
 .pointer-surface.is-pointer-active::after { opacity: 1; }
 .pointer-surface.is-pointer-active { border-color: rgba(25,200,161,.55); box-shadow: 0 18px 44px rgba(26,41,77,.12); }
 .growth-timeline li.pointer-surface::after { display: block; }
